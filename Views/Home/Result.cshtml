@@ -1,0 +1,9 @@
+@model List<Dictionary<string, object>>
+<h1>Welcome to Quoting Dojo</h1>
+<ul>
+@foreach(var user in ViewBag.Users)
+{
+    <!-- Remember, these are Dictionaries - so you must use user["KeyName"] to access the values within -->
+    <li>@user["name"] @user["quote"] @user["updated_at"]</li>
+}
+</ul>
